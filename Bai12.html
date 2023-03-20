@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  money = parseInt(prompt('Nhập số tiền gửi'))
+  income = parseInt(prompt('Nhập lãi suất'))
+  month = parseInt(prompt('Nhập số tháng gửi'))
+  for (let i = 0; i < month; i++) {
+    money = money + money * income
+  }document.write('Tổng Số tiền sau lãi là ' + money)
+</script>
+</body>
+</html>

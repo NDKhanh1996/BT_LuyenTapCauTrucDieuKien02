@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise2</title>
+</head>
+<body>
+<h2>Chương trình tính số điện phải trả</h2>
+<input type="number" id="input" placeholder="Nhập vào số điện">
+<button type="button" id="money" onclick="calculate()">Calculate</button>
+<br>
+<h3 id="display"></h3>
+<script>
+  function calculate() {
+    let n = +document.getElementById('input').value;
+    if (Number.isInteger(n) && (n > 0)) {
+      //n là số nguyên => giải bài toán tiếp
+      let type1 = 1678;
+      let type2 = 1734;
+      let type3 = 2014;
+      let type4 = 2536;
+      let type5 = 2834;
+      let type6 = 2927;
+      let money;
+      if (0 <= n && n <= 100) {
+        money = type1 * n;
+      } else if (101 <= n && n <= 200) {
+        money = type2 * n;
+      } else if (201 <= n && n <= 300) {
+        money = type3 * n;
+      } else if (301 <= n && n <= 400) {
+        money = type4 * n;
+      } else if (401 <= n && n <= 500) {
+        money = type5 * n;
+      } else {
+        money = type6 * n;
+      }
+      document.getElementById('display').innerHTML = 'Số tiền điện là: ' + money + 'VND';
+
+    } else {
+      alert('Yêu cầu nhập lại');
+      // document.getElementById('display').innerHTML = 'Yêu cầu nhập lại'
+    }
+  }
+</script>
+</body>
+</html>
